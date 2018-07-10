@@ -22,6 +22,7 @@
 		7431B90620F4323700AA7FF9 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90520F4323700AA7FF9 /* CitiesViewController.swift */; };
 		7431B90820F4353200AA7FF9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90720F4353200AA7FF9 /* Extensions.swift */; };
 		7431B90A20F46BB500AA7FF9 /* CityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90920F46BB500AA7FF9 /* CityDetailView.swift */; };
+		7431B90C20F5058E00AA7FF9 /* SelectCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90B20F5058E00AA7FF9 /* SelectCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		7431B90520F4323700AA7FF9 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		7431B90720F4353200AA7FF9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7431B90920F46BB500AA7FF9 /* CityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailView.swift; sourceTree = "<group>"; };
+		7431B90B20F5058E00AA7FF9 /* SelectCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityViewController.swift; sourceTree = "<group>"; };
 		BDD3B2991CA96211B488D3B2 /* Pods-GlovoChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoChallenge/Pods-GlovoChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		CBDC46A2059F1B469C728E62 /* Pods-GlovoChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoChallenge/Pods-GlovoChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				7431B90520F4323700AA7FF9 /* CitiesViewController.swift */,
+				7431B90B20F5058E00AA7FF9 /* SelectCityViewController.swift */,
 				7431B90920F46BB500AA7FF9 /* CityDetailView.swift */,
 			);
 			path = View;
@@ -299,6 +302,7 @@
 				7431B90620F4323700AA7FF9 /* CitiesViewController.swift in Sources */,
 				7431B90220F4321700AA7FF9 /* CitiesViewModel.swift in Sources */,
 				7431B8F820F403E700AA7FF9 /* Country.swift in Sources */,
+				7431B90C20F5058E00AA7FF9 /* SelectCityViewController.swift in Sources */,
 				7431B8FA20F40E0900AA7FF9 /* Repository.swift in Sources */,
 				7431B90820F4353200AA7FF9 /* Extensions.swift in Sources */,
 				7431B8FC20F40FB700AA7FF9 /* APIEndpointConfig.swift in Sources */,

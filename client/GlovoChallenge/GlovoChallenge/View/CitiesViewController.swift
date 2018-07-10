@@ -43,7 +43,7 @@ class CitiesViewController: UIViewController {
         selectCity.backgroundColor = .white
         selectCity.layer.cornerRadius = 12
         selectCity.setTitleColor(view.tintColor, for: .normal)
-        selectCity.setTitle("Tap to select city", for: .normal)
+        selectCity.setTitle("search for city...", for: .normal)
         selectCity.layer.shadowColor = UIColor.black.cgColor
         selectCity.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
         selectCity.layer.masksToBounds = false
@@ -70,7 +70,10 @@ class CitiesViewController: UIViewController {
     func setObservers() {
         
         btnSelectCity.reactive.tap.observeNext {
-            
+            let selectCityViewController = SelectCityViewController()
+            selectCityViewController.viewModel = self.viewModel
+            let navigationController = UINavigationController(rootViewController: selectCityViewController)
+            self.present(navigationController, animated: true, completion: nil)
         }.dispose(in: disposeBag)
         
         viewModel.polygon.observeNext { [weak self] polygon in
@@ -85,10 +88,15 @@ class CitiesViewController: UIViewController {
             self?.btnSelectCity.setTitle(cityName, for: .normal)
         }.dispose(in: disposeBag)
         
+        viewModel.userSelectedCity.observeNext { [weak self] marker in
+            self?.mapView.animate(toLocation: marker.position)
+            self?.mapView.animate(toZoom: GlovoConstants.defaultZoom)
+        }.dispose(in: disposeBag)
+        
         viewModel.selectedCity.observeNext { [weak self] city in
             
             guard let city = city else {
-                self?.btnSelectCity.setTitle("Tap to select city", for: .normal)
+                self?.btnSelectCity.setTitle("search for city...", for: .normal)
                 self?.animateHideCityDetailView()
                 return
             }

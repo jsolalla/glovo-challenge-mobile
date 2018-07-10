@@ -12,7 +12,5 @@ struct Country: Decodable {
     
     let code: String
     let name: String
-    
-    var cities: [City]?
-    
+
 }

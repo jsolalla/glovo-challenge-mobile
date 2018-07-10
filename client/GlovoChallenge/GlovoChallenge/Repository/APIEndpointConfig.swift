@@ -13,7 +13,7 @@ public enum APIEndPointConfig: String, Equatable {
     case production = "http://192.168.100.15:3000"
     case development = "http://localhost:3000"
     
-    private static let defaultConfig = APIEndPointConfig.production
+    private static let defaultConfig = APIEndPointConfig.development
     
     /// Get current server host value
     public static var current: APIEndPointConfig {

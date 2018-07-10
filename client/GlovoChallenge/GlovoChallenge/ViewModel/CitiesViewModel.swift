@@ -22,6 +22,7 @@ class CitiesViewModel {
     let marker = Subject<GMSMarker, NoError>()
     let selectedCityName = Subject<String, NoError>()
     let selectedCity = Subject<City?, NoError>()
+    let userSelectedCity = Subject<GMSMarker, NoError>()
     let currentLocation = Subject<CLLocation, NoError>()
     
     var polygons: [GMSPolygon] = []
@@ -72,6 +73,7 @@ class CitiesViewModel {
             
             
             let newMarker = GMSMarker(position: newPolygone.path!.coordinate(at: 0))
+            newMarker.title = city.code
             marker.next(newMarker)
             markers.append(newMarker)
         }
@@ -82,6 +84,21 @@ class CitiesViewModel {
         glovoRepository.getCity(with: city.code).observeNext { [weak self] city in
             self?.selectedCity.next(city)
         }.dispose(in: disposeBag)
+    }
+    
+    func setUserSelectedCity(_ city: City) {
+        if let marker = markers.filter ({ $0.title!.elementsEqual(city.code)}).first {
+            selectedCityName.next(city.name)
+            userSelectedCity.next(marker)
+        }
+    }
+    
+    func getCountries() -> [Country] {
+        return countries
+    }
+    
+    func getCities(for country: Country) -> [City] {
+        return cities.filter { $0.country_code.elementsEqual(country.code) }
     }
     
 }
