@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		37347C83D04FDA99D1899A59 /* Pods_GlovoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DB448A77ED54ADBCC5555D /* Pods_GlovoChallenge.framework */; };
 		7431B8DC20F3F1EA00AA7FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B8DB20F3F1EA00AA7FF9 /* AppDelegate.swift */; };
-		7431B8DE20F3F1EA00AA7FF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B8DD20F3F1EA00AA7FF9 /* ViewController.swift */; };
 		7431B8E120F3F1EA00AA7FF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7431B8DF20F3F1EA00AA7FF9 /* Main.storyboard */; };
 		7431B8E320F3F1EC00AA7FF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7431B8E220F3F1EC00AA7FF9 /* Assets.xcassets */; };
 		7431B8E620F3F1EC00AA7FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7431B8E420F3F1EC00AA7FF9 /* LaunchScreen.storyboard */; };
+		7431B8F620F403BE00AA7FF9 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B8F520F403BE00AA7FF9 /* City.swift */; };
+		7431B8F820F403E700AA7FF9 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B8F720F403E700AA7FF9 /* Country.swift */; };
+		7431B8FA20F40E0900AA7FF9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B8F920F40E0900AA7FF9 /* Repository.swift */; };
+		7431B8FC20F40FB700AA7FF9 /* APIEndpointConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B8FB20F40FB700AA7FF9 /* APIEndpointConfig.swift */; };
+		7431B8FE20F410FE00AA7FF9 /* GlovoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B8FD20F410FE00AA7FF9 /* GlovoEndpoint.swift */; };
+		7431B90020F4306B00AA7FF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B8FF20F4306B00AA7FF9 /* Constants.swift */; };
+		7431B90220F4321700AA7FF9 /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90120F4321700AA7FF9 /* CitiesViewModel.swift */; };
+		7431B90620F4323700AA7FF9 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90520F4323700AA7FF9 /* CitiesViewController.swift */; };
+		7431B90820F4353200AA7FF9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90720F4353200AA7FF9 /* Extensions.swift */; };
+		7431B90A20F46BB500AA7FF9 /* CityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90920F46BB500AA7FF9 /* CityDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44DB448A77ED54ADBCC5555D /* Pods_GlovoChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlovoChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7431B8D820F3F1EA00AA7FF9 /* GlovoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlovoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7431B8DB20F3F1EA00AA7FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7431B8DD20F3F1EA00AA7FF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7431B8E020F3F1EA00AA7FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7431B8E220F3F1EC00AA7FF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7431B8E520F3F1EC00AA7FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7431B8E720F3F1EC00AA7FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7431B8F520F403BE00AA7FF9 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		7431B8F720F403E700AA7FF9 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		7431B8F920F40E0900AA7FF9 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		7431B8FB20F40FB700AA7FF9 /* APIEndpointConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpointConfig.swift; sourceTree = "<group>"; };
+		7431B8FD20F410FE00AA7FF9 /* GlovoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovoEndpoint.swift; sourceTree = "<group>"; };
+		7431B8FF20F4306B00AA7FF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7431B90120F4321700AA7FF9 /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
+		7431B90520F4323700AA7FF9 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		7431B90720F4353200AA7FF9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7431B90920F46BB500AA7FF9 /* CityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailView.swift; sourceTree = "<group>"; };
 		BDD3B2991CA96211B488D3B2 /* Pods-GlovoChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoChallenge/Pods-GlovoChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		CBDC46A2059F1B469C728E62 /* Pods-GlovoChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoChallenge/Pods-GlovoChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,13 +80,62 @@
 			isa = PBXGroup;
 			children = (
 				7431B8DB20F3F1EA00AA7FF9 /* AppDelegate.swift */,
-				7431B8DD20F3F1EA00AA7FF9 /* ViewController.swift */,
+				7431B8F020F401C200AA7FF9 /* Model */,
+				7431B8F120F401CA00AA7FF9 /* View */,
+				7431B8F220F401D500AA7FF9 /* ViewModel */,
+				7431B8F320F401DF00AA7FF9 /* Repository */,
+				7431B8F420F4026C00AA7FF9 /* Utils */,
 				7431B8DF20F3F1EA00AA7FF9 /* Main.storyboard */,
-				7431B8E220F3F1EC00AA7FF9 /* Assets.xcassets */,
 				7431B8E420F3F1EC00AA7FF9 /* LaunchScreen.storyboard */,
+				7431B8E220F3F1EC00AA7FF9 /* Assets.xcassets */,
 				7431B8E720F3F1EC00AA7FF9 /* Info.plist */,
 			);
 			path = GlovoChallenge;
+			sourceTree = "<group>";
+		};
+		7431B8F020F401C200AA7FF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7431B8F520F403BE00AA7FF9 /* City.swift */,
+				7431B8F720F403E700AA7FF9 /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7431B8F120F401CA00AA7FF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7431B90520F4323700AA7FF9 /* CitiesViewController.swift */,
+				7431B90920F46BB500AA7FF9 /* CityDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7431B8F220F401D500AA7FF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7431B90120F4321700AA7FF9 /* CitiesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7431B8F320F401DF00AA7FF9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7431B8FB20F40FB700AA7FF9 /* APIEndpointConfig.swift */,
+				7431B8FD20F410FE00AA7FF9 /* GlovoEndpoint.swift */,
+				7431B8F920F40E0900AA7FF9 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7431B8F420F4026C00AA7FF9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7431B8FF20F4306B00AA7FF9 /* Constants.swift */,
+				7431B90720F4353200AA7FF9 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		769F2D5485065FD58F451888 /* Frameworks */ = {
@@ -227,8 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7431B8DE20F3F1EA00AA7FF9 /* ViewController.swift in Sources */,
+				7431B90A20F46BB500AA7FF9 /* CityDetailView.swift in Sources */,
+				7431B8FE20F410FE00AA7FF9 /* GlovoEndpoint.swift in Sources */,
+				7431B90620F4323700AA7FF9 /* CitiesViewController.swift in Sources */,
+				7431B90220F4321700AA7FF9 /* CitiesViewModel.swift in Sources */,
+				7431B8F820F403E700AA7FF9 /* Country.swift in Sources */,
+				7431B8FA20F40E0900AA7FF9 /* Repository.swift in Sources */,
+				7431B90820F4353200AA7FF9 /* Extensions.swift in Sources */,
+				7431B8FC20F40FB700AA7FF9 /* APIEndpointConfig.swift in Sources */,
 				7431B8DC20F3F1EA00AA7FF9 /* AppDelegate.swift in Sources */,
+				7431B8F620F403BE00AA7FF9 /* City.swift in Sources */,
+				7431B90020F4306B00AA7FF9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
