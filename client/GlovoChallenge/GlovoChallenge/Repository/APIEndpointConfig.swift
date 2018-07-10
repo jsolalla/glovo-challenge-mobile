@@ -10,7 +10,7 @@ import Foundation
 
 public enum APIEndPointConfig: String, Equatable {
     
-    case production = "http://192.168.100.15:3000"
+    case production = "http://192.168.15.167:3000"
     case development = "http://localhost:3000"
     
     private static let defaultConfig = APIEndPointConfig.development

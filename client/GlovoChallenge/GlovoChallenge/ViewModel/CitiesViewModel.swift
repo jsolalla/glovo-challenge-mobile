@@ -115,11 +115,11 @@ class CitiesViewModel {
     }
     
     func getCountries() -> [Country] {
-        return countries
+        return countries.sorted { $0.name < $1.name }
     }
     
     func getCities(for country: Country) -> [City] {
-        return cities.filter { $0.country_code.elementsEqual(country.code) }
+        return cities.filter { $0.country_code.elementsEqual(country.code) }.sorted { $0.name < $1.name }
     }
     
 }

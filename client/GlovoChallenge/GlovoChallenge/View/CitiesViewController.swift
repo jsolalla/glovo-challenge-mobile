@@ -60,7 +60,9 @@ class CitiesViewController: UIViewController {
             locationManager.delegate = self
             locationManager.startUpdatingLocation()
         default:
-           break
+            let defaultCoordinate = mapView.projection.coordinate(for: mapView.center)
+            mapView.animate(toLocation: defaultCoordinate)
+            mapView.animate(toZoom: 5)
         }
         
         setConstraints()
@@ -70,10 +72,7 @@ class CitiesViewController: UIViewController {
     func setObservers() {
         
         btnSelectCity.reactive.tap.observeNext {
-            let selectCityViewController = SelectCityViewController()
-            selectCityViewController.viewModel = self.viewModel
-            let navigationController = UINavigationController(rootViewController: selectCityViewController)
-            self.present(navigationController, animated: true, completion: nil)
+            self.presentSelectCityViewController()
         }.dispose(in: disposeBag)
         
         viewModel.polygon.observeNext { [weak self] polygon in
@@ -108,6 +107,13 @@ class CitiesViewController: UIViewController {
             
         }.dispose(in: disposeBag)
         
+    }
+    
+    func presentSelectCityViewController() {
+        let selectCityViewController = SelectCityViewController()
+        selectCityViewController.viewModel = self.viewModel
+        let navigationController = UINavigationController(rootViewController: selectCityViewController)
+        self.present(navigationController, animated: true, completion: nil)
     }
     
 }

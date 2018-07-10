@@ -7,11 +7,8 @@
 //
 
 import UIKit
-import ReactiveKit
 
 class SelectCityViewController: UIViewController {
-
-    let disposeBag = DisposeBag()
     
     lazy var citiesTableView: UITableView = {
         let tableView = UITableView()
@@ -26,10 +23,16 @@ class SelectCityViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(close))
         title = "Select city"
+        
         setConstraints()
     }
 
+    @objc func close() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - UITableViewDataSource

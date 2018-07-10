@@ -20,7 +20,6 @@
 		7431B90020F4306B00AA7FF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B8FF20F4306B00AA7FF9 /* Constants.swift */; };
 		7431B90220F4321700AA7FF9 /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90120F4321700AA7FF9 /* CitiesViewModel.swift */; };
 		7431B90620F4323700AA7FF9 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90520F4323700AA7FF9 /* CitiesViewController.swift */; };
-		7431B90820F4353200AA7FF9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90720F4353200AA7FF9 /* Extensions.swift */; };
 		7431B90A20F46BB500AA7FF9 /* CityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90920F46BB500AA7FF9 /* CityDetailView.swift */; };
 		7431B90C20F5058E00AA7FF9 /* SelectCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431B90B20F5058E00AA7FF9 /* SelectCityViewController.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		7431B8FF20F4306B00AA7FF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7431B90120F4321700AA7FF9 /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
 		7431B90520F4323700AA7FF9 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
-		7431B90720F4353200AA7FF9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7431B90920F46BB500AA7FF9 /* CityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailView.swift; sourceTree = "<group>"; };
 		7431B90B20F5058E00AA7FF9 /* SelectCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityViewController.swift; sourceTree = "<group>"; };
 		BDD3B2991CA96211B488D3B2 /* Pods-GlovoChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoChallenge/Pods-GlovoChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				7431B8FF20F4306B00AA7FF9 /* Constants.swift */,
-				7431B90720F4353200AA7FF9 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -304,7 +301,6 @@
 				7431B8F820F403E700AA7FF9 /* Country.swift in Sources */,
 				7431B90C20F5058E00AA7FF9 /* SelectCityViewController.swift in Sources */,
 				7431B8FA20F40E0900AA7FF9 /* Repository.swift in Sources */,
-				7431B90820F4353200AA7FF9 /* Extensions.swift in Sources */,
 				7431B8FC20F40FB700AA7FF9 /* APIEndpointConfig.swift in Sources */,
 				7431B8DC20F3F1EA00AA7FF9 /* AppDelegate.swift in Sources */,
 				7431B8F620F403BE00AA7FF9 /* City.swift in Sources */,
