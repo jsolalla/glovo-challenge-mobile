@@ -33,7 +33,7 @@ class CitiesViewModel {
         combineLatest(glovoRepository.getCountries(), glovoRepository.getCities()).observeNext { [weak self] countries, cities in
             self?.countries = countries
             self?.cities = cities
-            self?.setPolygons()
+            self?.setMap()
         }.dispose(in: disposeBag)
         
         currentLocation.observeNext { [weak self] location in
@@ -57,27 +57,47 @@ class CitiesViewModel {
         
     }
     
-    private func setPolygons() {
+    private func setMap() {
         
         for city in cities {
             
             var newPolygone: GMSPolygon!
+            var cityCoordinates: [CLLocationCoordinate2D] = []
             
             for workingArea in city.working_area {
-                let path = GMSMutablePath(fromEncodedPath: workingArea)
-                newPolygone = GMSPolygon(path: path)
-                newPolygone.fillColor = UIColor(red: 255, green: 255, blue: 0, alpha: 0.6)
-                polygon.next(newPolygone)
-                polygons.append(newPolygone)
+                if let path = GMSMutablePath(fromEncodedPath: workingArea) {
+                    
+                    for location in 0..<path.count() {
+                        cityCoordinates.append(path.coordinate(at: location))
+                    }
+                    
+                    newPolygone = GMSPolygon(path: path)
+                    newPolygone.fillColor = UIColor(red: 255, green: 255, blue: 0, alpha: 0.6)
+                    polygon.next(newPolygone)
+                    polygons.append(newPolygone)
+                }
             }
             
-            
-            let newMarker = GMSMarker(position: newPolygone.path!.coordinate(at: 0))
+            let centerLocation = getCenterLocation(for: cityCoordinates)
+            let newMarker = GMSMarker(position: centerLocation)
             newMarker.title = city.code
             marker.next(newMarker)
             markers.append(newMarker)
         }
         
+    }
+    
+    private func getCenterLocation(for coordinates: [CLLocationCoordinate2D]) -> CLLocationCoordinate2D {
+        
+        let latitudes = coordinates.map { $0.latitude }.sorted()
+        let longitudes = coordinates.map { $0.longitude }.sorted()
+        
+        let maxLatitude: CLLocationDegrees = latitudes.last ?? 0.0
+        let minLatitude: CLLocationDegrees = latitudes.first ?? 0.0
+        let maxLongitude: CLLocationDegrees = longitudes.last ?? 0.0
+        let minLongitude: CLLocationDegrees = longitudes.first ?? 0.0
+        
+        return CLLocationCoordinate2D(latitude: (maxLatitude + minLatitude) / 2, longitude: (maxLongitude + minLongitude) / 2)
     }
     
     private func getCityDetail(_ city: City) {
