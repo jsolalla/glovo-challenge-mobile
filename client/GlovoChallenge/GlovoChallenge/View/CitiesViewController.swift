@@ -2,7 +2,7 @@
 //  CitiesViewController.swift
 //  GlovoChallenge
 //
-//  Created by Jesus Santa Olalla  (Vendor) on 7/9/18.
+//  Created by Jesus Santa Olalla on 7/9/18.
 //  Copyright © 2018 Jesus Santa Olalla. All rights reserved.
 //
 
@@ -55,15 +55,9 @@ class CitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch (CLLocationManager.authorizationStatus()) {
-        case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.delegate = self
-            locationManager.startUpdatingLocation()
-        default:
-            let defaultCoordinate = mapView.projection.coordinate(for: mapView.center)
-            mapView.animate(toLocation: defaultCoordinate)
-            mapView.animate(toZoom: 5)
-        }
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         
         setConstraints()
         setObservers()
@@ -121,6 +115,16 @@ class CitiesViewController: UIViewController {
 // MARK: - CLLocationManagerDelegate
 
 extension CitiesViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+        } else {
+            let defaultCoordinate = mapView.projection.coordinate(for: mapView.center)
+            mapView.animate(toLocation: defaultCoordinate)
+            mapView.animate(toZoom: 5)
+        }
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
