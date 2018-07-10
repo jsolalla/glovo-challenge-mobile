@@ -80,6 +80,7 @@ class CitiesViewModel {
             
             let centerLocation = getCenterLocation(for: cityCoordinates)
             let newMarker = GMSMarker(position: centerLocation)
+            newMarker.icon = UIImage(named: "glovo_marker")
             newMarker.title = city.code
             marker.next(newMarker)
             markers.append(newMarker)
